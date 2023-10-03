@@ -1,0 +1,472 @@
+/* App.css */
+
+/* Include the custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+/* Update the input box width and center it */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/background.jpg');
+  /* Replace 'path-to-your-image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  /* Adjust the opacity value (0.5) as needed */
+  z-index: -1;
+  /* Place it behind other content */
+}
+
+/* Apply the custom font to the entire web app */
+body {
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Changes content alignment from center to the start */
+  height: 100vh;
+  padding-top: 10%;
+  /* Adjust this percentage to control how much higher you want the content */
+}
+
+.game-title {
+  background-color: #ffffff;
+  font-size: 6rem;
+  font-family: 'Press Start 2P', cursive;
+  margin-top: -100px;
+  /* Adjust this value if needed */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for the music button */
+.music-button {
+  background-image: url('./music\ off.png');
+  /* Set the initial background image */
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 25%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Style for the music button when it's in the "off" state */
+.music-button.off {
+  background-image: url('./music\ on.png');
+  /* Set the background image for the "off" state */
+}
+
+/* Style for the music button when clicked (active) */
+.music-button:active {
+  transform: scale(0.95);
+  /* Slightly reduce the button size when clicked */
+}
+
+/* Style for the start button */
+.start-button {
+  background-color: #77b1ef;
+  /* Set a blue background color for the start button */
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  /* Increased padding for a larger button */
+  font-size: 24px;
+  /* Larger font size */
+  border-radius: 8px;
+  /* Larger border radius */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+  position: relative;
+  /* Add this line to enable positioning */
+  z-index: 2;
+  /* Ensure the start button is above other elements */
+}
+
+/* Style for the instructions button */
+.instructions-button {
+  background-color: #77b1ef;
+  /* Change to your desired background color */
+  color: white;
+  padding: 6px 12px;
+  /* Decrease padding for a smaller button */
+  font-size: 16px;
+  /* Decrease font size for a smaller button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+  border-radius: 4px;
+  /* Decrease border radius for a smaller button */
+  margin-top: 20px;
+  /* Add this to create space between the buttons */
+  display: block;
+  /* Change from inline to block to stack buttons vertically */
+  margin-left: auto;
+  margin-right: auto;
+  /* Center the button horizontally */
+}
+
+.instructions-button:hover {
+  background-color: #45a049;
+  /* Change to your desired hover color */
+}
+
+/* Style for the instructions tooltip */
+.instructions-tooltip {
+  display: none;
+  position: absolute;
+  line-height: 2;
+  background-color: #f9f9f9;
+  /* Tooltip background color */
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  z-index: 0;
+  /* Place the tooltip below other elements */
+  width: 300px;
+  /* Adjust as needed */
+  top: 65%;
+  /* Position the tooltip below the button */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Show the tooltip when instructions-button is hovered */
+.instructions-button:hover+.instructions-tooltip {
+  display: block;
+  width: 500px;
+
+}
+
+.welcome-container {
+  text-align: center;
+  width: 35%;
+  background-color: #ffffff;
+  /* Set a white background for the welcome container */
+  padding: 30px;
+  /* Increased padding for a larger container */
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Add a subtle shadow */
+}
+
+.game-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  /* Increased padding for a larger container */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+  background-color: #f8f8f8;
+  /* Light gray background for game info */
+  padding: 20px;
+  /* Increased padding */
+  border-radius: 8px;
+  /* Larger border radius */
+  margin-bottom: 30px;
+  /* Increased margin */
+}
+
+.results-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  /* Increased padding for a larger container */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.3;
+  width: 40%;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  /* Center the container horizontally */
+}
+
+.clear-leaderboard-button {
+  background-color: #e74c3c;
+  ;
+  /* Change to your desired background color */
+  color: white;
+  padding: 6px 12px;
+  /* Decrease padding for a smaller button */
+  font-size: 16px;
+  /* Decrease font size for a smaller button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+  border-radius: 4px;
+  /* Decrease border radius for a smaller button */
+  margin-top: 20px;
+  /* Add this to create space between the buttons */
+  display: block;
+  /* Change from inline to block to stack buttons vertically */
+  margin-left: auto;
+  margin-right: auto;
+  /* Center the button horizontally */
+}
+
+input[type="text"] {
+  padding: 10px;
+  /* Decreased padding for a shorter input box */
+  font-size: 20px;
+  /* Larger font size */
+  border: 2px solid #ccc;
+  /* Thicker border */
+  border-radius: 8px;
+  /* Larger border radius */
+  width: 100%;
+  margin-bottom: 20px;
+  /* Increased margin */
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+}
+
+.unscrambled-word {
+  font-size: 36px;
+  /* Larger font size */
+  margin-bottom: 20px;
+  /* Increased margin */
+}
+
+.incorrect-message {
+  color: #ff0000;
+  /* Set red color for incorrect message */
+  font-size: 24px;
+  /* Larger font size */
+}
+
+.correct-message {
+  color: #4caf50;
+  font-size: 24px;
+}
+
+.scrambled-word {
+  font-size: 24px;
+  /* Larger font size */
+}
+
+.input-container {
+  margin-top: 30px;
+  /* Increased margin */
+}
+
+.guess-button {
+  background-color: #4caf50;
+  /* Set a green background color for the guess button */
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  /* Increased padding for a larger button */
+  font-size: 24px;
+  /* Larger font size */
+  border-radius: 8px;
+  /* Larger border radius */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+}
+
+.start-button:hover,
+.guess-button:hover {
+  background-color: #ffcc23;
+  /* Slightly darker green */
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the button on hover */
+}
+
+.clear-leaderboard-button:hover {
+  background-color: #cb1c0d;
+  /* Slightly darker green */
+}
+
+.clear-leaderboard-button:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the button on hover */
+}
+
+.guess-button:active {
+  transform: scale(0.95);
+  /* Slightly reduce the button size when clicked */
+}
+
+.scrambled-word {
+  opacity: 0;
+  /* Start with the word hidden */
+  animation: fadeIn 1s forwards;
+  /* Apply the fade-in animation */
+}
+
+/* Style for the leaderboard table */
+.leaderboard table {
+  width: 100%;
+  /* Set the table width to 100% to make it responsive */
+  text-align: center;
+  /* Center-align the table content horizontally */
+  border-collapse: collapse;
+  /* Collapse table borders */
+}
+
+/* Style for table header cells */
+.leaderboard th {
+  padding: 10px;
+  /* Add padding to header cells */
+  background-color: #f8f8f8;
+  /* Light gray background for header cells */
+  border: 1px solid #ccc;
+  /* Add a border to header cells */
+}
+
+/* Style for table body cells */
+.leaderboard td {
+  padding: 10px;
+  /* Add padding to body cells */
+  border: 1px solid #ccc;
+  /* Add a border to body cells */
+}
+
+/* Style for the restart button */
+.restart-button {
+  background-color: #4caf50;
+  /* Set a green background color for the restart button */
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  /* Increased padding for a larger button */
+  font-size: 24px;
+  /* Larger font size */
+  border-radius: 8px;
+  /* Larger border radius */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Press Start 2P', cursive;
+  /* Use the custom font family for the entire body */
+  letter-spacing: -2px;
+  margin-top: 100px;
+  /* Increase the margin-top to create space between the button and leaderboard */
+  margin-bottom: 20px;
+  /* Add margin to the bottom of the button */
+}
+
+@keyframes zoomInOut {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Apply the animation to the "Let's Play" text */
+.welcome-container h1 {
+  animation: zoomInOut 1s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.correct-message,
+.incorrect-message {
+  animation: feedbackAnimation 0.5s;
+}
+
+@keyframes feedbackAnimation {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.correct-message {
+  animation: pulseEffect 1s infinite, colorTransition 1s infinite;
+  color: #4caf50;
+  /* Set green color for correct message */
+  font-size: 24px;
+  /* Larger font size */
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorTransition {
+  0% {
+    background-color: #4caf50;
+    /* Starting green shade */
+  }
+
+  50% {
+    background-color: #2e8b57;
+    /* Darker green shade */
+  }
+
+  100% {
+    background-color: #4caf50;
+    /* Return to starting shade */
+  }
+}
