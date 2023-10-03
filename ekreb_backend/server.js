@@ -109,24 +109,6 @@ app.post('/guess', (req, res) => {
   }
 });
 
-// Endpoint to submit a player's score
-app.post('/submit-score', (req, res) => {
-    const { name, score, date } = req.body; // Include 'date' in the request body
-
-    // Push the new score to the leaderboard with the date
-    leaderboard.push({ name, score, date });
-
-    // Sort the leaderboard based on scores in descending order
-    leaderboard.sort((a, b) => b.score - a.score);
-
-    // Limit the leaderboard to the top 10 scores
-    if (leaderboard.length > 10) {
-        leaderboard.length = 10;
-    }
-
-    res.json({ message: 'Score submitted successfully!' });
-});
-
 // Endpoint to fetch the leaderboard
 app.get('/leaderboard', (req, res) => {
     res.json(leaderboard);
