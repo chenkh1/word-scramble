@@ -8,7 +8,7 @@ Kevin Chen: [kevin.h.chen@vanderbilt.edu](mailto:kevin.h.chen@vanderbilt.edu)
 
 ## Introduction
 
-Welcome to ekreb! Inspired by former ChangePlusPlus president, this web-based game challenges you to unscramble words within 30 seconds. You have up to 3 incorrect guesses, so see if you can top the leaderboard!
+Welcome to word scramble! web-based game challenges you to unscramble words within 30 seconds. You have up to 3 incorrect guesses, so see if you can top the leaderboard!
 
 ## Instructions
 
@@ -34,7 +34,7 @@ Follow these steps to start playing the Word Scramble Game:
   npm install cors
   ```
 
-1. Clone the ekreb project files to your computer using:
+1. Clone the word-scramble project files to your computer using:
 
    ```bash
    git clone https://github.com/ChangePlusPlusVandy/change-coding-challenge-2023-chenkh1.git
@@ -51,7 +51,3 @@ Follow these steps to start playing the Word Scramble Game:
    ```bash
    npm start
    ```
-
-## Reflection
-
-This web app accomplishes basic functions as well as additional features that I believe would improve the look and feel of the final product. React stood out to me as a strong option for the front end for its component-based architecture and virtual DOM, which was useful when designing the user interface. I used CSS and keyframes to animate certain elements to provide a more engaging and intuitive user experience. I included additional functionality on the backend to create/clear a leaderboard for users to keep track of scores. The main challenge with this project was debugging errors, although I found console.log() statements useful in clarifying and resolving issues effectively.
