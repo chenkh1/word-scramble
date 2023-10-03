@@ -2,9 +2,10 @@
 
 Kevin Chen: [kevin.h.chen@vanderbilt.edu](mailto:kevin.h.chen@vanderbilt.edu)
 
-# ekreb
+# Demo
 
-<img width="1512" alt="Screenshot 2023-09-22 at 3 25 28 PM" src="https://github.com/ChangePlusPlusVandy/change-coding-challenge-2023-chenkh1/assets/94060565/d0939c79-de99-43c9-8ed0-3aef2937283d">
+<img width="1496" alt="Screenshot 2023-10-03 at 2 11 06 PM" src="https://github.com/chenkh1/word-scramble/assets/94060565/fd6f5c5b-7932-47fd-9e05-13efa8281ca4">
+
 
 ## Introduction
 
